@@ -1,7 +1,7 @@
 .footer {
-    background: var(--navy-mid);
+    background: var(--navy);
     border-top: 1px solid var(--navy-border);
-    padding: 72px 0 32px;
+    padding: 72px 0 40px;
 }
 
 .footer__grid {
@@ -12,10 +12,12 @@
 }
 
 .footer__logo {
-    font-size: 1.4rem;
-    font-weight: 800;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
     margin-bottom: 16px;
     letter-spacing: -0.02em;
+    color: var(--cream);
 }
 
 .footer__logo .orange {
@@ -23,16 +25,18 @@
 }
 
 .footer__logo-sub {
-    font-size: 0.75rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
     font-weight: 600;
-    color: var(--text-muted);
+    color: rgba(245, 241, 235, 0.45);
     vertical-align: middle;
+    margin-left: 5px;
 }
 
 .footer__brand p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.7;
+    color: rgba(245, 241, 235, 0.55);
+    font-size: 0.88rem;
+    line-height: 1.75;
     max-width: 280px;
     margin-bottom: 24px;
 }
@@ -49,8 +53,8 @@
     width: 36px;
     height: 36px;
     border-radius: var(--radius-sm);
-    border: 1.5px solid var(--navy-border);
-    color: var(--text-muted);
+    border: 1.5px solid rgba(245, 241, 235, 0.15);
+    color: rgba(245, 241, 235, 0.55);
     transition: var(--transition);
 }
 
@@ -60,11 +64,11 @@
 }
 
 .footer__col h4 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: rgba(245, 241, 235, 0.35);
     margin-bottom: 20px;
 }
 
@@ -76,13 +80,13 @@
 
 .footer__col ul li a,
 .footer__col ul li span {
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    color: rgba(245, 241, 235, 0.55);
+    font-size: 0.88rem;
     transition: var(--transition);
 }
 
 .footer__col ul li a:hover {
-    color: var(--orange);
+    color: var(--cream);
 }
 
 .footer__bottom {
@@ -90,12 +94,12 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 32px;
-    border-top: 1px solid var(--navy-border);
+    border-top: 1px solid rgba(245, 241, 235, 0.1);
 }
 
 .footer__bottom p {
-    color: var(--text-subtle);
-    font-size: 0.82rem;
+    color: rgba(245, 241, 235, 0.3);
+    font-size: 0.8rem;
 }
 
 .footer__bottom-links {
@@ -104,13 +108,13 @@
 }
 
 .footer__bottom-links a {
-    color: var(--text-subtle);
-    font-size: 0.82rem;
+    color: rgba(245, 241, 235, 0.3);
+    font-size: 0.8rem;
     transition: var(--transition);
 }
 
 .footer__bottom-links a:hover {
-    color: var(--text-muted);
+    color: rgba(245, 241, 235, 0.7);
 }
 
 @media (max-width: 900px) {

@@ -1,0 +1,189 @@
+/* ════════════════════════
+   LOCATIONS PAGE  —  cream palette
+════════════════════════ */
+
+.locations-page .locations-hero {
+    padding-top: 68px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+}
+
+.locations-page .locations-hero .container {
+    padding-top: 64px;
+    padding-bottom: 72px;
+}
+
+.locations-region {
+    margin-bottom: 56px;
+}
+
+.locations-region__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.locations-region__name {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--orange);
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+}
+
+.locations-region__line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+}
+
+.locations-cities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.location-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+}
+
+.location-card:hover {
+    border-color: var(--orange-rule);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+.location-card__icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.location-card__name {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+}
+
+.location-card__desc {
+    font-size: 0.79rem;
+    color: var(--ink-muted);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.location-card__industries {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.location-card__industries span {
+    font-size: 0.68rem;
+    background: var(--cream-alt);
+    color: var(--ink-muted);
+    padding: 2px 8px;
+    border-radius: 99px;
+    font-weight: 500;
+    border: 1px solid var(--rule);
+}
+
+.location-card__arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--orange);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.location-card:hover .location-card__arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ── Services Grid ─────────── */
+.locations-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.svc-card__icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.svc-card__name {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+}
+
+.svc-card__sub {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    margin-bottom: 16px;
+}
+
+.svc-card__cities {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid var(--rule);
+    padding-top: 16px;
+}
+
+.svc-card__city-link {
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    transition: var(--transition);
+}
+
+.svc-card__city-link:hover {
+    color: var(--orange);
+}
+
+.svc-card__more {
+    font-size: 0.78rem;
+    color: var(--ink-subtle);
+}
+
+/* ── Responsive ─────────── */
+@media (max-width: 900px) {
+    .locations-cities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .locations-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .locations-cities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .locations-services-grid {
+        grid-template-columns: 1fr;
+    }
+}

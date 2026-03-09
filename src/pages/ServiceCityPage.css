@@ -1,0 +1,82 @@
+.scp-body {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 48px;
+    align-items: start;
+    padding-top: 0;
+    padding-bottom: 80px;
+}
+
+/* .scp-main — layout handled by grid parent */
+
+.scp-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.scp-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.scp-features .check {
+    color: var(--orange);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.scp-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 100px;
+}
+
+.scp-aside__card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.scp-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.scp-fact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--navy-border);
+}
+
+.scp-fact:last-child {
+    border-bottom: none;
+}
+
+.scp-fact span {
+    color: var(--text-muted);
+}
+
+.scp-fact strong {
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .scp-body {
+        grid-template-columns: 1fr;
+    }
+
+    .scp-aside {
+        position: static;
+    }
+}
