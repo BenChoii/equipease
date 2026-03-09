@@ -1,0 +1,127 @@
+.blog-page .page-hero-blog {
+    padding-top: 160px;
+    background: linear-gradient(180deg, var(--navy-mid) 0%, var(--navy) 100%);
+    border-bottom: 1px solid var(--navy-border);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.blog-card__icon {
+    font-size: 2rem;
+}
+
+.blog-card__cat {
+    align-self: flex-start;
+}
+
+.blog-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.blog-card__excerpt {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.blog-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid var(--navy-border);
+    margin-top: 4px;
+}
+
+.blog-card__meta {
+    font-size: 0.75rem;
+    color: var(--text-subtle);
+}
+
+/* ── Newsletter ─────────────────────────────────────────────── */
+.blog-newsletter {
+    background: var(--navy-card);
+    border-top: 1px solid var(--navy-border);
+    border-bottom: 1px solid var(--navy-border);
+    padding: 56px 0;
+}
+
+.blog-newsletter__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.blog-newsletter__form {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.blog-newsletter__input {
+    background: var(--navy-mid);
+    border: 1.5px solid var(--navy-border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    width: 280px;
+    transition: var(--transition);
+}
+
+.blog-newsletter__input:focus {
+    outline: none;
+    border-color: var(--orange);
+}
+
+.blog-newsletter__input::placeholder {
+    color: var(--text-subtle);
+}
+
+@media (max-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-newsletter__inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .blog-newsletter__form {
+        width: 100%;
+    }
+
+    .blog-newsletter__input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-newsletter__form {
+        flex-direction: column;
+    }
+}
