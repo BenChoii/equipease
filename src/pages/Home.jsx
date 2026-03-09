@@ -125,7 +125,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* Right — image */}
+                    {/* Right — full-bleed diagonal image panel */}
                     <div className="hero__visual">
                         <div className="hero__img-frame">
                             <img
@@ -134,7 +134,6 @@ export default function Home() {
                                 className="hero__img"
                                 loading="eager"
                             />
-                            <div className="hero__img-accent" aria-hidden="true" />
                         </div>
                     </div>
                 </div>
