@@ -104,55 +104,56 @@
 }
 
 /* ─────────────────────────────────────────────────────────────
-   Diagonal stripe sits on .hero itself (not inside the clipped
-   frame). It's cream-coloured so invisible over the background,
-   but shows clearly where it crosses the image — at the exact
-   same angle as the clip-path edge.
+   Diagonal stripes on .hero using clip-path polygon.
 
-   At a 1710 × 620px hero the clip-path polygon(10% 0 ... 0% 100%)
-   on a 52%-wide panel creates an edge angle of:
-   atan(52% × 10% × 1710 / 620) ≈ 8 ° from vertical.
-   Both stripe and clip use 8 °.
+   Math: .hero__visual is width:52%, right:0 → left edge = 48% of hero.
+   Image clip-path polygon(10% 0 ... 0% 100%) in panel coords:
+     top of cut  = 48% + 52% × 10% = 53.2% of hero
+     bottom of cut = 48% + 52% × 0%  = 48.0% of hero
+
+   The stripe polygons reference the SAME hero-coordinate numbers
+   so the angle is an exact match at every viewport size.
 ─────────────────────────────────────────────────────────────── */
 
-/* Primary stripe — wide, solid cream */
+/* Primary stripe — 2.5% wide, solid cream
+   Left edge:  (53.2%, 0) → (48.0%, 100%)  ← exact image cut
+   Right edge: (55.7%, 0) → (50.5%, 100%)  ← parallel, 2.5% wider */
 .hero::before {
     content: '';
     position: absolute;
-    top: -20%;
-    /* approx centre of the clip edge in hero coords:
-       left edge of panel = 48%; top of cut = 48% + 52%×10% = 53.2%
-       midpoint ≈ 50.6%  */
-    left: 50.6%;
-    width: 2.8%;
-    height: 140%;
+    inset: 0;
     background: var(--cream);
-    transform-origin: center center;
-    transform: rotate(8deg);
+    clip-path: polygon(53.2% 0%,
+            55.7% 0%,
+            50.5% 100%,
+            48.0% 100%);
     z-index: 3;
     pointer-events: none;
 }
 
-/* Secondary stripe — narrower, semi-transparent */
+/* Secondary stripe — 1% wide, semi-transparent, offset 4% right
+   Left edge:  (57.2%, 0) → (52.0%, 100%)
+   Right edge: (58.2%, 0) → (53.0%, 100%) */
 .hero::after {
     content: '';
     position: absolute;
-    top: -20%;
-    left: 54.6%;
-    /* 4% to the right of the primary stripe */
-    width: 1%;
-    height: 140%;
-    background: rgba(245, 241, 235, 0.5);
-    transform-origin: center center;
-    transform: rotate(8deg);
+    inset: 0;
+    background: rgba(245, 241, 235, 0.55);
+    clip-path: polygon(57.2% 0%,
+            58.2% 0%,
+            53.0% 100%,
+            52.0% 100%);
     z-index: 3;
     pointer-events: none;
 }
 
-/* ── Stats strip (directly below hero, above fold on desktop) ── */
+/* ── Stats strip ── */
 .hero__stats-strip {
     border-top: 1px solid var(--rule);
     background: var(--cream);
+    position: relative;
+    /* raise above the absolutely-positioned image panel */
+    z-index: 10;
 }
 
 .hero__stats-inner {
