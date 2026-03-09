@@ -103,31 +103,49 @@
     display: block;
 }
 
-/* White diagonal slash overlaid on the image (like Journey Capital) */
-.hero__img-frame::before {
+/* ─────────────────────────────────────────────────────────────
+   Diagonal stripe sits on .hero itself (not inside the clipped
+   frame). It's cream-coloured so invisible over the background,
+   but shows clearly where it crosses the image — at the exact
+   same angle as the clip-path edge.
+
+   At a 1710 × 620px hero the clip-path polygon(10% 0 ... 0% 100%)
+   on a 52%-wide panel creates an edge angle of:
+   atan(52% × 10% × 1710 / 620) ≈ 8 ° from vertical.
+   Both stripe and clip use 8 °.
+─────────────────────────────────────────────────────────────── */
+
+/* Primary stripe — wide, solid cream */
+.hero::before {
     content: '';
     position: absolute;
-    top: -10%;
-    left: 15%;
-    width: 18%;
-    height: 130%;
-    background: rgba(245, 241, 235, 0.85);
-    transform: rotate(12deg);
-    z-index: 2;
+    top: -20%;
+    /* approx centre of the clip edge in hero coords:
+       left edge of panel = 48%; top of cut = 48% + 52%×10% = 53.2%
+       midpoint ≈ 50.6%  */
+    left: 50.6%;
+    width: 2.8%;
+    height: 140%;
+    background: var(--cream);
+    transform-origin: center center;
+    transform: rotate(8deg);
+    z-index: 3;
     pointer-events: none;
 }
 
-/* Second thinner slash for depth */
-.hero__img-frame::after {
+/* Secondary stripe — narrower, semi-transparent */
+.hero::after {
     content: '';
     position: absolute;
-    top: -10%;
-    left: 25%;
-    width: 7%;
-    height: 130%;
-    background: rgba(245, 241, 235, 0.4);
-    transform: rotate(12deg);
-    z-index: 2;
+    top: -20%;
+    left: 54.6%;
+    /* 4% to the right of the primary stripe */
+    width: 1%;
+    height: 140%;
+    background: rgba(245, 241, 235, 0.5);
+    transform-origin: center center;
+    transform: rotate(8deg);
+    z-index: 3;
     pointer-events: none;
 }
 
