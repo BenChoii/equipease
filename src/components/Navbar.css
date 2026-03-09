@@ -81,6 +81,13 @@
     font-size: 0.82rem !important;
 }
 
+/* Free tool nav badge */
+.navbar__free-tool {
+    color: var(--orange) !important;
+    font-weight: 600 !important;
+    font-size: 0.88rem !important;
+}
+
 /* ── CTA button ── */
 .navbar__cta {
     font-size: 0.85rem !important;
