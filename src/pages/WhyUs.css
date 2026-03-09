@@ -1,13 +1,28 @@
+/* Why Us page — cream palette */
+
 .why-us .page-hero {
-    padding-top: 160px;
-    background: linear-gradient(180deg, var(--navy-mid) 0%, var(--navy) 100%);
-    border-bottom: 1px solid var(--navy-border);
+    padding-top: 140px;
+    padding-bottom: 80px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
 }
 
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+}
+
+.benefit-card {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    transition: box-shadow 0.2s ease;
+}
+
+.benefit-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
 }
 
 .benefit-card__icon {
@@ -18,33 +33,35 @@
 .benefit-card__title {
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--ink);
     margin-bottom: 10px;
 }
 
 .benefit-card__desc {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: var(--ink-muted);
     line-height: 1.65;
 }
 
+/* ── Comparison ─────────────────────────────────────────────── */
 .comparison-section {
-    background: var(--navy-mid);
-    border-top: 1px solid var(--navy-border);
-    border-bottom: 1px solid var(--navy-border);
+    background: var(--cream-alt, #F0EBE3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
 }
 
 .comparison-table {
-    border: 1px solid var(--navy-border);
+    border: 1px solid var(--rule);
     border-radius: var(--radius-md);
     overflow: hidden;
+    background: #fff;
 }
 
 .comparison-table__header {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
-    background: var(--navy-card);
-    border-bottom: 1px solid var(--navy-border);
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
 }
 
 .comparison-table__col-head {
@@ -53,24 +70,25 @@
     font-weight: 700;
     letter-spacing: 0.05em;
     text-align: center;
+    color: var(--ink);
 }
 
 .comparison-table__col-head.equipease {
     color: var(--orange);
-    border-left: 1px solid var(--navy-border);
-    background: var(--orange-dim);
+    border-left: 1px solid var(--rule);
+    background: rgba(217, 87, 0, 0.05);
 }
 
 .comparison-table__col-head.bank {
-    color: var(--text-muted);
-    border-left: 1px solid var(--navy-border);
+    color: var(--ink-muted);
+    border-left: 1px solid var(--rule);
 }
 
 .comparison-table__row {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
-    border-bottom: 1px solid var(--navy-border);
-    transition: var(--transition);
+    border-bottom: 1px solid var(--rule);
+    transition: background 0.15s ease;
 }
 
 .comparison-table__row:last-child {
@@ -78,7 +96,7 @@
 }
 
 .comparison-table__row:hover {
-    background: rgba(255, 102, 0, 0.03);
+    background: rgba(217, 87, 0, 0.02);
 }
 
 .comparison-table__feature,
@@ -89,21 +107,21 @@
 }
 
 .comparison-table__feature {
-    color: var(--text-muted);
+    color: var(--ink-muted);
     font-weight: 600;
 }
 
 .comparison-table__good {
-    color: #4ade80;
+    color: #1a7a4a;
     font-weight: 600;
-    border-left: 1px solid var(--navy-border);
-    background: rgba(74, 222, 128, 0.04);
+    border-left: 1px solid var(--rule);
+    background: rgba(26, 122, 74, 0.04);
     text-align: center;
 }
 
 .comparison-table__bad {
-    color: var(--text-subtle);
-    border-left: 1px solid var(--navy-border);
+    color: var(--ink-muted);
+    border-left: 1px solid var(--rule);
     text-align: center;
 }
 
@@ -126,7 +144,7 @@
     .comparison-table__feature,
     .comparison-table__good,
     .comparison-table__bad {
-        padding: 12px 12px;
+        padding: 12px;
         font-size: 0.78rem;
     }
 }

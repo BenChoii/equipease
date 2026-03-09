@@ -77,6 +77,7 @@ export default function Navbar() {
 
                     <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''} onClick={close}>About</NavLink>
                     <NavLink to="/blog" className={({ isActive }) => isActive ? 'active' : ''} onClick={close}>Blog</NavLink>
+                    <NavLink to="/calculator" className={({ isActive }) => isActive ? 'active navbar__free-tool' : 'navbar__free-tool'} onClick={close}>🧮 Free Tool</NavLink>
                     <a href="tel:18442503273" className="navbar__phone" onClick={close}>1-844-250-EASE</a>
                     <Link to="/apply" className="btn-primary navbar__cta" onClick={close}>Apply Now →</Link>
                 </nav>

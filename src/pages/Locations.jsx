@@ -58,7 +58,7 @@ export default function Locations() {
             </section>
 
             {/* ── Services Available Province-Wide ──────────────────── */}
-            <section className="section" style={{ background: 'var(--navy-mid)', borderTop: '1px solid var(--navy-border)' }}>
+            <section className="section" style={{ background: 'var(--cream-alt)', borderTop: '1px solid var(--rule)' }}>
                 <div className="container">
                     <div className="section-header">
                         <div className="eyebrow">Province-Wide</div>

@@ -10,6 +10,7 @@ import About from './pages/About'
 import Locations from './pages/Locations'
 import CityPage from './pages/CityPage'
 import ServiceCityPage from './pages/ServiceCityPage'
+import Calculator from './pages/Calculator'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/apply" element={<Apply />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
+        <Route path="/calculator" element={<Calculator />} />
 
         {/* BC Location pages */}
         <Route path="/locations" element={<Locations />} />

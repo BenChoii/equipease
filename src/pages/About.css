@@ -1,12 +1,15 @@
+/* About page — cream palette */
+
 .about-page .page-hero-about {
-    padding-top: 160px;
-    background: linear-gradient(180deg, var(--navy-mid) 0%, var(--navy) 100%);
-    border-bottom: 1px solid var(--navy-border);
+    padding-top: 140px;
+    padding-bottom: 80px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
 }
 
 /* ── Mission ─────────────────────────────────────────────────── */
 .about-mission {
-    border-bottom: 1px solid var(--navy-border);
+    border-bottom: 1px solid var(--rule);
 }
 
 .about-mission__inner {
@@ -23,22 +26,22 @@
 }
 
 .about-stat {
-    background: var(--navy-card);
-    border: 1px solid var(--navy-border);
+    background: #fff;
+    border: 1px solid var(--rule);
     border-radius: var(--radius-md);
     padding: 28px 24px;
     text-align: center;
-    transition: var(--transition);
+    transition: box-shadow 0.2s ease;
 }
 
 .about-stat:hover {
-    border-color: rgba(255, 102, 0, 0.4);
-    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
 }
 
 .about-stat__value {
+    font-family: 'Lora', Georgia, serif;
     font-size: 2.2rem;
-    font-weight: 900;
+    font-weight: 700;
     color: var(--orange);
     letter-spacing: -0.03em;
     margin-bottom: 6px;
@@ -46,21 +49,28 @@
 
 .about-stat__label {
     font-size: 0.82rem;
-    color: var(--text-muted);
+    color: var(--ink-muted);
     font-weight: 500;
 }
 
 /* ── Values ──────────────────────────────────────────────────── */
 .about-values {
-    background: var(--navy-mid);
-    border-top: 1px solid var(--navy-border);
-    border-bottom: 1px solid var(--navy-border);
+    background: var(--cream-alt, #F0EBE3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
 }
 
 .values-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
+
+.value-card {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
 }
 
 .value-card__icon {
@@ -72,12 +82,12 @@
     font-size: 1.05rem;
     font-weight: 700;
     margin-bottom: 10px;
-    color: var(--text-primary);
+    color: var(--ink);
 }
 
 .value-card__desc {
     font-size: 0.87rem;
-    color: var(--text-muted);
+    color: var(--ink-muted);
     line-height: 1.65;
 }
 
@@ -94,6 +104,10 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-md);
+    padding: 32px 24px;
 }
 
 .team-card__avatar {
@@ -112,7 +126,7 @@
 .team-card__name {
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--ink);
 }
 
 .team-card__title {
@@ -124,7 +138,7 @@
 
 .team-card__bio {
     font-size: 0.88rem;
-    color: var(--text-muted);
+    color: var(--ink-muted);
     line-height: 1.65;
     margin-top: 6px;
 }

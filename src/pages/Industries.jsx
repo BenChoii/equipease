@@ -102,7 +102,7 @@ export default function Industries() {
                 </div>
             </section>
 
-            <section className="section-sm" style={{ textAlign: 'center', padding: '80px 0', background: 'var(--navy-mid)', borderTop: '1px solid var(--navy-border)' }}>
+            <section className="section-sm" style={{ textAlign: 'center', padding: '80px 0', background: 'var(--cream-alt)', borderTop: '1px solid var(--rule)' }}>
                 <div className="container">
                     <h2 className="section-title">Don't See Your Industry?</h2>
                     <p className="section-subtitle" style={{ margin: '16px auto 32px', maxWidth: '480px' }}>We can finance almost anything. Give us a call and let's talk about your specific needs.</p>

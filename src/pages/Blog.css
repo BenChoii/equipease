@@ -1,7 +1,10 @@
+/* Blog page — cream palette */
+
 .blog-page .page-hero-blog {
-    padding-top: 160px;
-    background: linear-gradient(180deg, var(--navy-mid) 0%, var(--navy) 100%);
-    border-bottom: 1px solid var(--navy-border);
+    padding-top: 140px;
+    padding-bottom: 80px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
 }
 
 .blog-grid {
@@ -15,6 +18,15 @@
     flex-direction: column;
     gap: 12px;
     cursor: pointer;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    transition: box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
 }
 
 .blog-card__icon {
@@ -26,15 +38,16 @@
 }
 
 .blog-card__title {
+    font-family: 'Lora', Georgia, serif;
     font-size: 1.05rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--ink);
     line-height: 1.4;
 }
 
 .blog-card__excerpt {
     font-size: 0.88rem;
-    color: var(--text-muted);
+    color: var(--ink-muted);
     line-height: 1.7;
     flex: 1;
 }
@@ -44,20 +57,20 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 16px;
-    border-top: 1px solid var(--navy-border);
+    border-top: 1px solid var(--rule);
     margin-top: 4px;
 }
 
 .blog-card__meta {
     font-size: 0.75rem;
-    color: var(--text-subtle);
+    color: var(--ink-muted);
 }
 
 /* ── Newsletter ─────────────────────────────────────────────── */
 .blog-newsletter {
-    background: var(--navy-card);
-    border-top: 1px solid var(--navy-border);
-    border-bottom: 1px solid var(--navy-border);
+    background: var(--cream-alt, #F0EBE3);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
     padding: 56px 0;
 }
 
@@ -75,15 +88,15 @@
 }
 
 .blog-newsletter__input {
-    background: var(--navy-mid);
-    border: 1.5px solid var(--navy-border);
+    background: #fff;
+    border: 1.5px solid var(--rule);
     border-radius: var(--radius-sm);
-    color: var(--text-primary);
+    color: var(--ink);
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     padding: 12px 20px;
     width: 280px;
-    transition: var(--transition);
+    transition: border-color 0.2s ease;
 }
 
 .blog-newsletter__input:focus {
@@ -92,7 +105,7 @@
 }
 
 .blog-newsletter__input::placeholder {
-    color: var(--text-subtle);
+    color: var(--ink-muted);
 }
 
 @media (max-width: 1024px) {

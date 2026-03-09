@@ -130,7 +130,7 @@ export default function ServiceCityPage() {
             </section>
 
             {/* ── Other BC Cities ───────────────────────────────────── */}
-            <section className="section" style={{ background: 'var(--navy-mid)', borderTop: '1px solid var(--navy-border)' }}>
+            <section className="section" style={{ background: 'var(--cream-alt)', borderTop: '1px solid var(--rule)' }}>
                 <div className="container">
                     <div className="eyebrow">{serviceData.name} Across BC</div>
                     <h2 className="section-title" style={{ marginTop: '12px', marginBottom: '32px' }}>
